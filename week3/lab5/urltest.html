@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+    <title>test</title>
+    <script type="text/javascript">
+      var searchString = document.location.search;
+      searchString = searchString.split("1");
+
+      var nvPairs = searchString.split("&");
+
+      for (var i = 0; i <  nvPairs.length; i++) {
+        var nvPair = nvPairs[i].split("=");
+        var name = nvPair[0];
+        var value = nvPair[1]
+        console.log("argument name="+name+"and value= "+value);
+      }
+    </script>
+  </head>
+  <body>
+  <h1>Noogle!</h1>
+  <form method="get" id="search">
+    <input type="text" name="searchterms" size="50">
+    <input type="submit" name="submit" value="Noogle it!">
+  </form>
+  </body>
+</html>
